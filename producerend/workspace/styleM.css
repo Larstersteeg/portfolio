@@ -1,0 +1,65 @@
+body {
+    background-image:url(homepage_achtergrond.jpg);
+   	background-size: 100%;
+   	background-attachment: scroll;
+   	
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    
+}
+
+li {
+    float: left;
+    padding-right:175px;
+    border:0px;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color:transparent;
+}
+
+
+div {
+    background-color: yellow;
+    padding: 20px;
+    display: none;
+}
+
+img{
+    -webkit-filter: blur(5px);
+     filter: blur(5px);
+     width: 5em;
+     height: 4em;
+}
+img:hover {
+    -webkit-filter: blur(0px);
+     filter: blur(0px);
+}
+nav ul {
+    border-top:double 3px #8e8e8e;
+    text-align:center;
+
+}
+nav ul li{
+    float:right;
+    padding:0px 90px;
+    list-style-type:none;
+    border-bottom:solid 1px #8e8e8e;
+}
+h1{
+    font-size: 150%;
+    color: White;  
+}

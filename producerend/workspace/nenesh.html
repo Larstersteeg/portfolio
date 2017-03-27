@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nabil Document</title>
+</head>
+<body> 
+
+
+<div>
+    <p>Hoeveel wil je bestellen:</p>
+    <input type="number" id=amountid name=""/> <br>
+        <p>Hoeveel kost het product: </p>
+    <input type="number" id=priceid name=""/> <br>
+        <p>Voer de landcode in:</p>
+    <input type="text" id="countryid" name="code_land" maxlength="2">land code <br>
+    <br>
+    <button onclick="calculate()" name="submit">Submit</button>
+</div> <br>
+<div id="demo">  </div>
+
+<div>BTW 21% : </div><div id="BTW"></div>
+<script>
+function calculate() {
+    
+var amount = document.getElementById("amountid");
+var amount2= parseInt(amount, 1);
+
+var kost = document.getElementById("priceid");
+var kost2 = parseInt(kost, 1);
+
+var country = document.getElementById("countryid");
+
+var price = amount2 * kost2;
+
+
+document.getElementById("demo").innerHTML= price;
+
+var btw = price / 100;
+btw = price * 21;
+
+document.getElementById("BTW").innerHTML= btw;
+
+}
+
+</script>
+</body>
+</html>
+
+
+
+
