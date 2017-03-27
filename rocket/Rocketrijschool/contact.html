@@ -1,0 +1,125 @@
+<html>
+<head>
+<link href="favicon.png" rel="icon" type="image/png">
+
+
+
+<style>
+
+    fieldset{
+        border-color: #FFB000;
+        border-width: 2px;
+        border-radius: 8px;
+    }
+    
+    .text{
+        color: #FFB000;
+    }
+    
+    
+</style>
+<title>Rijschool Rocket</title>
+</head>
+<body>
+<fieldset>
+<form method="post" action="mailto:460346@edu.rocmn.nl">
+                    <h3 id=contact class="text">Contact</h3>
+                    <div>
+                        <label for="Naam" class="text">Naam</label>
+                        <br>
+                        <input type="text" id="naam" name="Naam" placeholder="Naam" value="" required>
+                    </div>
+                    
+                    <div>
+                        <label for="achternaam" class="text">Achternaam</label>
+                        <br>
+                        <input type="text" id="achternaam" name="Achternaam" placeholder="Achternaam">
+                    </div>
+                    <div>
+                        <label for=E-mail class="text">E-mail</label>
+                        <br>
+                        <input type="email" name="E-mail" placeholder="E-mail">
+                    </div>
+                    <div>
+                        <label for="tel" class="text">Telefoon</label>
+                        <br>
+                        <input type="text" id="telefoon" name="tel" value="" placeholder="Telefoon">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="Bericht" class="text">Bericht</label>
+                        <br>
+                        <textarea name="Bericht" id="bericht" rows="6" cols="30" maxlength="250" placeholder="Vragen?"></textarea>
+                    </div>
+                    <br>
+                    
+            </form>
+            
+            <button type="button" onclick="reset()">Annuleren</button> &emsp;&emsp; <button type="button" onclick="myFunction()">Versturen</button>
+            
+    </fieldset>
+        
+        
+            
+            
+    <script>
+        function myFunction() {
+            var naam = document.getElementById("naam").value;
+            var achternaam = document.getElementById("achternaam").value;
+            var telefoon = document.getElementById("telefoon").value;
+            var bericht = document.getElementById("bericht").value;
+            checkLeeg(naam, achternaam, telefoon, bericht);
+            checkLetter(naam, achternaam);
+            checkTelefoon(telefoon);
+        }
+        function checkLeeg(naam, achternaam, telefoon, bericht) {
+            try {
+                if(naam == "") {
+                    throw "Er is niks ingevuld bij naam.";
+                }
+                if(achternaam == "") {
+                    throw "Er is niks ingevuld bij de achternaam.";
+                }
+                if(telefoon == "") {
+                    throw "Er is geen telefoon nummer ingevoerd.";
+                }
+                if(bericht == "") {
+                    throw "Er is geen bericht ingevuld.";
+                }
+                
+            }
+        }
+        function checkLetter(naam, achternaam) {
+            try {
+                if(naam !== isNaN(naam)) {
+                    throw "Er staat en nummer in de naam";
+                }
+                if(achternaam !== isNaN(achternaam)) {
+                    throw "Er staat een nummer(s) in de achternaam";
+                }
+            }
+        }
+        function checkTelefoon(telefoon) {
+            try {
+                if(telefoon == isNaN())
+            }
+        }
+        
+        function reset(){
+            document.getElementById("naam").innerHTML="";
+            document.getElementById("achternaam").innerHTML="";
+            document.getElementById("telefoon").innerHTML="";
+            document.getElementById("bericht").innerHTML="";
+            
+        }
+        
+    </script>
+
+
+    
+       
+</script>
+
+</body>
+
+</html>

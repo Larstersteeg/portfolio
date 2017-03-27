@@ -1,0 +1,12 @@
+Header, nav, footer{
+display:none;
+}
+
+img{
+    max-width:400px;
+}
+
+div{
+    color: black;
+    font-size: 12px;
+}
